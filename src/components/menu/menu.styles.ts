@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
   headerTitulo: {
     marginTop: 10,
     marginLeft: 20,
-    fontWeight: "bold",
+    fontFamily: "RBold",
     fontSize: 14,
-    color: colors.BLANCO,
+    color: colors.GRIS,
   },
   drawerStyle: {
     paddingLeft: 10,

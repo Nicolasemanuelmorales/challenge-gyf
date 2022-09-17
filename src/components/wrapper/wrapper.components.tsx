@@ -1,7 +1,6 @@
 import * as React from "react";
 import { RefreshControl, View, ScrollView } from "react-native";
 import colors from "../../../assets/colors";
-import styles from "./wrapper.styles";
 
 interface ILoader {
   child: JSX.Element;
@@ -10,7 +9,6 @@ interface ILoader {
 
 function Wrapper(props: ILoader) {
   const { child, refreshControl } = props;
-
   const [refreshing, setRefreshing] = React.useState(false);
 
   const wait = (timeout: any) => {
@@ -26,7 +24,7 @@ function Wrapper(props: ILoader) {
 
   return (
     <ScrollView
-      contentContainerStyle={styles.scroll}
+      contentContainerStyle={{ flex: 1 }}
       refreshControl={
         refreshControl ? (
           <RefreshControl

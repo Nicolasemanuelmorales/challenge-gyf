@@ -2,22 +2,23 @@ import { StyleSheet } from "react-native";
 import colors from "../../../assets/colors";
 
 const styles = StyleSheet.create({
-  wrapper: {
-    marginTop: 20,
-    flex: 1,
+  card: {
+    shadowColor: colors.GRIS,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+    elevation: 8,
+    marginVertical: 10,
+    marginHorizontal: 20,
   },
-  img: {
-    width: "100%",
-    height: 350,
-    resizeMode: "contain",
+  cardText: {
+    color: colors.GRIS,
   },
-  boxButton: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginTop: 20,
-  },
-  button: {
-    backgroundColor: colors.PRINCIPAL,
+  cardTitle: {
+    fontFamily: "RBold",
   },
 });
 export default styles;

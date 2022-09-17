@@ -23,7 +23,7 @@ function DrawerNavigatorContent(props: IProps) {
         </View>
       </Drawer.Section>
       <Drawer.Item
-        label={<Text style={{ color: "#ffffff" }}>Inicio</Text>}
+        label={<Text style={{ color: colors.GRIS }}>Inicio</Text>}
         onPress={() => {
           navigation.reset({
             routes: [{ name: "Inicio" }],
@@ -33,7 +33,7 @@ function DrawerNavigatorContent(props: IProps) {
         icon={() => <Icon name={"home"} size={20} color={colors.PRINCIPAL} />}
       />
       <Drawer.Item
-        label={<Text style={{ color: "#ffffff" }}>Favoritos</Text>}
+        label={<Text style={{ color: colors.GRIS }}>Favoritos</Text>}
         onPress={() => {
           navigation.reset({
             routes: [{ name: "Favoritos" }],
