@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./alert.styles";
+import styles from "./Alert.styles";
 import colors from "../../../assets/colors";
 import { Snackbar } from "react-native-paper";
 
@@ -9,7 +9,7 @@ interface IProps {
   message: string;
 }
 
-function DrawerNavigatorContent(IProps) {
+function Alert(IProps: IProps) {
   const { close, open, message } = IProps;
 
   return (
@@ -28,4 +28,4 @@ function DrawerNavigatorContent(IProps) {
   );
 }
 
-export default DrawerNavigatorContent;
+export default Alert;

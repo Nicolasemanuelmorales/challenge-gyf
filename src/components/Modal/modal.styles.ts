@@ -44,25 +44,36 @@ const styles = StyleSheet.create({
     width: "100%",
     maxHeight: Dimensions.get("window").height * 0.75,
   },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
+  nameUser: {
+    fontFamily: "RBold",
+    color: colors.GRIS,
+    fontSize: 15,
+    marginBottom: 5,
   },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
+  boxComentario: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
-  buttonClose: {
-    backgroundColor: "#2196F3",
+  inputNombreEmail: {
+    backgroundColor: colors.BLANCO,
+    height: 40,
+    padding: 5,
+    width: "50%",
   },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center",
+  inputComentario: {
+    backgroundColor: colors.BLANCO,
+    height: 70,
+    padding: 5,
+    borderTopWidth: 1,
+    borderColor: colors.PRINCIPAL,
   },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center",
+  borderEmail: {
+    borderLeftWidth: 1,
+    borderColor: colors.PRINCIPAL,
   },
 });
 export default styles;

@@ -33,16 +33,6 @@ function DrawerNavigatorContent(props: IProps) {
         icon={() => <Icon name={"home"} size={20} color={colors.PRINCIPAL} />}
       />
       <Drawer.Item
-        label={<Text style={{ color: colors.GRIS }}>Favoritos</Text>}
-        onPress={() => {
-          navigation.reset({
-            routes: [{ name: "Favoritos" }],
-          });
-        }}
-        style={styles.drawerStyle}
-        icon={() => <Icon name={"star"} size={20} color={colors.PRINCIPAL} />}
-      />
-      <Drawer.Item
         label={<Text style={{ color: colors.GRIS }}>Cerrar sesión</Text>}
         onPress={() => {
           navigation.reset({

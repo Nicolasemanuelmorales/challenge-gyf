@@ -3,7 +3,6 @@ import "react-native-gesture-handler";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Menu from "../components/menu/menu.components";
 import HomeStackNavigator from "./HomeStackNavigator";
-import FavoritosStackNavigator from "./FavoritosStackNavigator";
 import colors from "../../assets/colors";
 import { StatusBar } from "expo-status-bar";
 
@@ -22,7 +21,6 @@ export default function DrawerNavigator() {
         drawerContent={(props) => <Menu {...props} />}
       >
         <Drawer.Screen name="Inicio" component={HomeStackNavigator} />
-        <Drawer.Screen name="Favoritos" component={FavoritosStackNavigator} />
       </Drawer.Navigator>
       <StatusBar backgroundColor={colors.PRINCIPAL} translucent />
     </>

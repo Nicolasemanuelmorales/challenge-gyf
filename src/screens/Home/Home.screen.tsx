@@ -16,7 +16,7 @@ import ModalComentarios from "../../components/Modal/modal.components";
 export default function Home() {
   const [posts, setPosts] = useState<Card[]>([]);
   const [showModal, setShowMNodal] = useState(false);
-
+  const [idPost, setIdPost] = useState(0);
   const [refreshing, setRefreshing] = useState(false);
   const dispatch = useDispatch();
 
@@ -79,6 +79,7 @@ export default function Home() {
           <CardPaper
             onPress={() => {
               setShowMNodal(true);
+              setIdPost(item.post.id);
             }}
             elevation={5}
             style={styles.card}
@@ -130,6 +131,7 @@ export default function Home() {
         );
       })}
       <ModalComentarios
+        idPost={idPost}
         onClose={() => {
           setShowMNodal(false);
         }}
