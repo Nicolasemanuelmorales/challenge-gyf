@@ -11,5 +11,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#000000b7",
   },
+  actIndicator: {
+    flex: 1,
+    justifyContent: "center",
+  },
 });
 export default styles;

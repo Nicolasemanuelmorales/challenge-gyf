@@ -42,6 +42,18 @@ function DrawerNavigatorContent(props: IProps) {
         style={styles.drawerStyle}
         icon={() => <Icon name={"star"} size={20} color={colors.PRINCIPAL} />}
       />
+      <Drawer.Item
+        label={<Text style={{ color: colors.GRIS }}>Cerrar sesión</Text>}
+        onPress={() => {
+          navigation.reset({
+            routes: [{ name: "Login" }],
+          });
+        }}
+        style={styles.drawerStyle}
+        icon={() => (
+          <Icon name={"sign-out-alt"} size={22} color={colors.PRINCIPAL} />
+        )}
+      />
     </DrawerContentScrollView>
   );
 }

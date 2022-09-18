@@ -3,22 +3,18 @@ import colors from "../../../assets/colors";
 
 const styles = StyleSheet.create({
   card: {
-    shadowColor: colors.GRIS,
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 4.65,
-    elevation: 8,
     marginVertical: 10,
     marginHorizontal: 20,
+    paddingHorizontal: 10,
   },
   cardText: {
     color: colors.GRIS,
+    fontSize: 13,
   },
   cardTitle: {
     fontFamily: "RBold",
+    fontSize: 15,
+    marginBottom: 10,
   },
 });
 export default styles;

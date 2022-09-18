@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     marginTop: StatusBar.currentHeight,
   },
-  minH: {
+  boxLogo: {
     marginVertical: 20,
     flexDirection: "row",
     alignSelf: "center",
@@ -26,24 +26,10 @@ const styles = StyleSheet.create({
     fontFamily: "RBold",
     alignSelf: "center",
   },
-  boxGeneral2: {
+  boxGeneralCombo: {
     flex: 1,
     width: "90%",
     alignSelf: "center",
-  },
-  mb: {
-    marginBottom: 20,
-  },
-  labelS: {
-    fontFamily: "RMedium",
-    fontSize: 16,
-  },
-  mb25: {
-    marginBottom: 25,
-  },
-  fFM: {
-    fontFamily: "RMedium",
-    fontSize: 16,
   },
   boxBoton: {
     marginBottom: 20,
@@ -54,7 +40,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
   },
-  recor: {
+  recordar: {
     fontSize: 16,
     marginRight: 2,
     color: "#757575",
@@ -63,11 +49,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: 20,
   },
-  elev: { elevation: 0 },
-  imgG: {
-    width: 20,
-    height: 21,
-  },
+
   olvPass: {
     fontSize: 16,
     textAlign: "center",

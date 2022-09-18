@@ -1,24 +1,13 @@
-import React, { useEffect, useState } from "react";
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  Text,
-  View,
-  Button,
-  TextInput,
-} from "react-native";
-import {
-  HelperText,
-  Switch,
-  TextInput as TextInput2,
-} from "react-native-paper";
+import React, { useState, useCallback } from "react";
+import { Image, Pressable, ScrollView, Text, View, Button } from "react-native";
+import { HelperText, Switch, TextInput } from "react-native-paper";
 import colors from "../../../assets/colors";
 import Icon from "react-native-vector-icons/FontAwesome5";
 import styles from "./Login.styles";
 import { useDispatch } from "react-redux";
 import loaderAction from "../../redux/actions/LoaderAction";
 import { StatusBar } from "expo-status-bar";
+import { useFocusEffect } from "@react-navigation/native";
 
 interface IProps {
   navigation: any;
@@ -34,22 +23,53 @@ export default function Login(props: IProps) {
   const [recordarme, setRecordarme] = useState(false);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    //dispatch(loaderAction(true));
-  }, []);
+  const setValuesDeault = () => {
+    setPassError("");
+    setEmailError("");
+    setEmail("");
+    setPass("");
+  };
+  useFocusEffect(
+    useCallback(() => {
+      setValuesDeault();
+    }, [])
+  );
+
+  const ValidInputs = () => {
+    if (pass === "") {
+      setPassError("Campo vacío, indique cualquier valor");
+    } else {
+      setPassError("");
+    }
+    if (email === "") {
+      setEmailError("Campo vacío, indique cualquier valor");
+    } else {
+      setEmailError("");
+    }
+
+    if (passError === "" && emailError === "" && pass !== "" && email !== "") {
+      dispatch(loaderAction(true));
+      setTimeout(() => {
+        if (passError === "" && emailError === "") {
+          navigation.navigate("DrawerNavigator");
+        }
+        dispatch(loaderAction(false));
+      }, 1000);
+    }
+  };
 
   return (
     <ScrollView>
       <View style={styles.boxGeneral}>
-        <View style={styles.minH}>
+        <View style={styles.boxLogo}>
           <Image
             style={styles.img}
             source={require("../../../assets/images/gyf.png")}
           />
           <Text style={styles.title}>GYF</Text>
         </View>
-        <View style={styles.boxGeneral2}>
-          <TextInput2
+        <View style={styles.boxGeneralCombo}>
+          <TextInput
             theme={{
               colors: {
                 primary: colors.PRINCIPAL,
@@ -73,7 +93,7 @@ export default function Login(props: IProps) {
           >
             {emailError}
           </HelperText>
-          <TextInput2
+          <TextInput
             theme={{
               colors: {
                 primary: colors.PRINCIPAL,
@@ -89,7 +109,7 @@ export default function Login(props: IProps) {
             onChangeText={setPass}
             secureTextEntry={hidePass}
             right={
-              <TextInput2.Icon
+              <TextInput.Icon
                 name={() => (
                   <Pressable onTouchStart={() => setHidePass(!hidePass)}>
                     <Icon
@@ -119,7 +139,7 @@ export default function Login(props: IProps) {
               {passError}
             </HelperText>
             <View style={styles.boxRecordar}>
-              <Text style={styles.recor}>Recordar</Text>
+              <Text style={styles.recordar}>Recordar</Text>
               <Switch
                 value={recordarme}
                 onTouchStart={() => {
@@ -140,15 +160,13 @@ export default function Login(props: IProps) {
             <View style={{ flex: 1 }}>
               <Button
                 color={colors.PRINCIPAL}
-                onPress={() => navigation.navigate("DrawerNavigator")}
-                title="Resgistrar"
+                onPress={ValidInputs}
+                title="Registrar"
               />
             </View>
           </View>
 
-          <Text style={styles.olvPass} onPress={() => {}}>
-            ¿Olvidaste tu contraseña?
-          </Text>
+          <Text style={styles.olvPass}>¿Olvidaste tu contraseña?</Text>
         </View>
       </View>
       <StatusBar backgroundColor={"transparent"} />

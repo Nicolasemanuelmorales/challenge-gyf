@@ -6,7 +6,6 @@ import DrawerNavigator from "./DrawerNavigator";
 import { useSelector } from "react-redux";
 import { IRootState } from "../redux/reducers/rootReducer";
 import Loader from "../components/loader/loader.components";
-import { StatusBar } from "expo-status-bar";
 import colors from "../../assets/colors";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 

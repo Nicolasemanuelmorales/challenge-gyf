@@ -1,6 +1,5 @@
 import * as React from "react";
-import { ActivityIndicator } from "react-native-paper";
-import { View } from "react-native";
+import { View, ActivityIndicator } from "react-native";
 import styles from "./loader.styles";
 
 interface ILoader {
@@ -15,10 +14,11 @@ function Loader(props: ILoader) {
   return open ? (
     <View style={styles.boxGeneral}>
       <ActivityIndicator
-        style={{ flex: 1, justifyContent: "center" }}
+        style={styles.actIndicator}
         hidesWhenStopped={false}
         size={size}
         color={color}
+        animating={open}
       />
     </View>
   ) : (
