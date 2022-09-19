@@ -153,7 +153,7 @@ export default function Login(props: IProps) {
             <View style={styles.ingresar}>
               <Button
                 color={colors.PRINCIPAL}
-                onPress={() => navigation.navigate("DrawerNavigator")}
+                onPress={ValidInputs}
                 title="Ingresar"
               />
             </View>

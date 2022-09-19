@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     marginBottom: 20,
-    marginTop: StatusBar.currentHeight,
+    marginTop: 50,
   },
   boxLogo: {
     marginVertical: 20,

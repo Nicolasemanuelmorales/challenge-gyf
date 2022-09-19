@@ -37,7 +37,6 @@ export default function StackNavigator() {
         </Stack.Navigator>
       </NavigationContainer>
       <Loader open={loader} size={50} color={colors.PRINCIPAL} />
-      {console.log(alert)}
       <Alert
         open={alert.value}
         message={alert.message}

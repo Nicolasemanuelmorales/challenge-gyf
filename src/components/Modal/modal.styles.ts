@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    marginVertical: 10,
+    margingVertical: 10,
   },
   inputNombreEmail: {
     backgroundColor: colors.BLANCO,
