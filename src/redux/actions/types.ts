@@ -4,3 +4,5 @@ export interface IAction {
 }
 
 export const LOADER = "LOADER";
+export const COMMENT = "COMMENT";
+export const ALERT = "ALERT";

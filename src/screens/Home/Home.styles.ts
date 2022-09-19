@@ -16,5 +16,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     marginBottom: 10,
   },
+  boxFooterCard: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+  boxUser: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
+  boxWeb: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+  },
 });
 export default styles;

@@ -17,3 +17,10 @@ export function getUserId(id: number): Promise<User> {
 export function getCommentsByIdPost(id: number): Promise<Comment[]> {
   return axiosNoAuth<Comment[]>(`${baseUrl}/posts/${id}/comments`, "GET");
 }
+
+export function saveCommentsByIdPost(
+  id: number,
+  body: Comment
+): Promise<Comment> {
+  return axiosNoAuth<Comment>(`${baseUrl}/posts/${id}/comments`, "POST", body);
+}

@@ -42,13 +42,15 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     alignItems: "center",
     width: "100%",
-    maxHeight: Dimensions.get("window").height * 0.75,
+    maxHeight: Dimensions.get("window").height * 0.5,
   },
   nameUser: {
     fontFamily: "RBold",
     color: colors.GRIS,
     fontSize: 15,
-    marginBottom: 5,
+  },
+  comentario: {
+    fontSize: 13,
   },
   boxComentario: {
     display: "flex",
@@ -56,7 +58,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingVertical: 10,
+    marginVertical: 10,
   },
   inputNombreEmail: {
     backgroundColor: colors.BLANCO,
@@ -66,14 +68,38 @@ const styles = StyleSheet.create({
   },
   inputComentario: {
     backgroundColor: colors.BLANCO,
-    height: 70,
-    padding: 5,
+    height: 50,
+    paddingHorizontal: 5,
     borderTopWidth: 1,
     borderColor: colors.PRINCIPAL,
   },
   borderEmail: {
     borderLeftWidth: 1,
     borderColor: colors.PRINCIPAL,
+  },
+  boxSendComentario: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    borderTopWidth: 1,
+    borderTopColor: colors.PRINCIPAL,
+  },
+  boxNombreEmail: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  botonEnviar: {
+    flex: 1,
+    textAlign: "center",
+    color: colors.BLANCO,
+    fontFamily: "RBold",
+    justifyContent: "center",
+    marginTop: 38,
+  },
+  boxEnviar: {
+    backgroundColor: colors.PRINCIPAL,
+    flex: 1,
+    alignItems: "center",
   },
 });
 export default styles;

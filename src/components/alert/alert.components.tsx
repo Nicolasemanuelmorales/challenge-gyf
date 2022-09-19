@@ -7,18 +7,22 @@ interface IProps {
   close: () => void;
   open: boolean;
   message: string;
+  severity?: "success" | "error";
 }
 
 function Alert(IProps: IProps) {
-  const { close, open, message } = IProps;
+  const { close, open, message, severity = "success" } = IProps;
 
   return (
     <Snackbar
-      wrapperStyle={{ alignSelf: "center" }}
-      style={styles.alert}
+      wrapperStyle={styles.wrapp}
+      style={{
+        backgroundColor:
+          severity === "success" ? colors.PRINCIPAL : colors.GRIS,
+      }}
       visible={open}
       onDismiss={close}
-      duration={1500}
+      duration={2000}
       action={{
         label: "X",
       }}
