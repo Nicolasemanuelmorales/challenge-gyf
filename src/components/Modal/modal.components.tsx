@@ -29,7 +29,6 @@ function ModalComentarios(props: IModal) {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [comentario, setComentario] = useState("");
-  const scrollViewRef = useRef();
 
   const setDefaultValues = () => {
     setNombre("");
@@ -68,7 +67,6 @@ function ModalComentarios(props: IModal) {
       saveCommentsByIdPost(
         idPost,
         new Comment({
-          id: 0,
           postId: idPost,
           name: nombre,
           email: email,
@@ -78,7 +76,6 @@ function ModalComentarios(props: IModal) {
         dispatch(commentAction([...comentarios, resp]));
         setComments([...comments, resp]);
         setDefaultValues();
-        scrollViewRef.current.scrollToEnd({ animated: true });
         dispatch(
           alertAction({
             value: true,
@@ -121,7 +118,7 @@ function ModalComentarios(props: IModal) {
                 color={colors.BLANCO}
               />
             </View>
-            <ScrollView ref={() => scrollViewRef}>
+            <ScrollView>
               {comments.map((item, index) => {
                 return (
                   <View key={index} style={styles.boxComentario}>

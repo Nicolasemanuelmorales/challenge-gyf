@@ -1,5 +1,5 @@
 export default class Comment {
-  id: number;
+  id?: number;
   postId: number;
   name: string;
   email: string;
