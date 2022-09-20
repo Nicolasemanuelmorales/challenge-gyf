@@ -7,7 +7,7 @@ interface IProps {
   close: () => void;
   open: boolean;
   message: string;
-  severity?: "success" | "error";
+  severity?: string;
 }
 
 function Alert(IProps: IProps) {
