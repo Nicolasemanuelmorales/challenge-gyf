@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Alert.styles";
+import styles from "./alert.styles";
 import colors from "../../../assets/colors";
 import { Snackbar } from "react-native-paper";
 
@@ -27,7 +27,7 @@ function Alert(IProps: IProps) {
         label: "X",
       }}
       theme={{ colors: { accent: colors.BLANCO } }}
-      children={message}
+      children={message ? message : ""}
     />
   );
 }

@@ -8,7 +8,7 @@ import { IRootState } from "../redux/reducers/rootReducer";
 import Loader from "../components/loader/loader.components";
 import colors from "../../assets/colors";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
-import Alert from "../components/alert/Alert.components";
+import Alert from "../components/alert/alert.components";
 import alertAction from "../redux/actions/AlertAction";
 
 const Stack = createStackNavigator();
